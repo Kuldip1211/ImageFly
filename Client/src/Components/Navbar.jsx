@@ -1,10 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
 import { assets } from "../assets/assets.js";
-import { useState } from "react";
+import { useContext } from "react";
+import { AppContxt } from "../context/AppContext.jsx";
 
 function Navbar() {
   // user login or not
-  const[user ,setUser] = useState(null);
+  const {user} = useContext(AppContxt);
 
   const navigate = useNavigate();
   return (
@@ -19,7 +20,7 @@ function Navbar() {
         user 
         ?
          <div className="flex items-center gap-2 sm:gap-3">
-          <button className="flex items-center gap-2  bg-blue-100 px-4 sm:px-6 py-1.5 sm:py-3 rounded-full hover-scale-105 transition-all duration-700">
+          <button onClick={()=>navigate("/buy")} className="flex items-center gap-2  bg-blue-100 px-4 sm:px-6 py-1.5 sm:py-3 rounded-full hover-scale-105 transition-all duration-700">
             <img src={assets.credit_star}  className="w-5" alt="" />
             <p className="text-xs sm:text-sm font-medium text-gray-600">Credit left: 50</p>
           </button>

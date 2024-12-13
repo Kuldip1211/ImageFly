@@ -1,9 +1,17 @@
-import React from 'react'
+import Discription from '../Components/Discription'
+import GanrateButton from '../Components/GanrateButton'
+import Headeer from '../Components/Headeer'
+import Step from '../Components/Step'
+import Testimonial from '../Components/Testimonial'
 
 function Home() {
   return (
     <div>
-      home
+     <Headeer />
+     <Step />
+     <Discription />
+     <Testimonial />
+     <GanrateButton />
     </div>
   )
 }

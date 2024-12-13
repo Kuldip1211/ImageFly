@@ -3,6 +3,7 @@ import Home from "./pages/Home"
 import Result from "./pages/Result"
 import BuyCRedit from "./pages/BuyCRedit"
 import Navbar from "./Components/Navbar"
+import Footer from "./Components/Footer"
 
 
 function App() {
@@ -15,6 +16,9 @@ function App() {
       <Route path="/result" element={<Result/>}/>
       <Route path="/buy" element={<BuyCRedit/>}/>
      </Routes>
+
+     {/* footer */}
+     <Footer />
     </div>
   )
 }
