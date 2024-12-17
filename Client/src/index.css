@@ -6,6 +6,8 @@
 *{
   font-family: "Outfit";
   font-optical-sizing: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
 .placeholder-color{
